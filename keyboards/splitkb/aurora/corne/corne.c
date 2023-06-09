@@ -36,6 +36,14 @@ static void render_space(void) {
     oled_write_P(PSTR("     "), false);
 }
 
+void keyboard_pre_init_user(void) {
+  // Set our LED pin as output
+  setPinOutput(24);
+  // Turn the LED off
+  // (Due to technical reasons, high is off and low is on)
+  writePinHigh(24);
+}
+
 static void render_mod_status_gui_alt(uint8_t modifiers) {
     static const char PROGMEM gui_off_1[] = {0x85, 0x86, 0};
     static const char PROGMEM gui_off_2[] = {0xa5, 0xa6, 0};
