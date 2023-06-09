@@ -21,6 +21,6 @@
 #   define OLED_FONT_H "keyboards/splitkb/aurora/corne/glcdfont.c"
 #endif
 
-#define TAPPING_TERM 200
+#define TAPPING_TERM 400
 
 #define IGNORE_MOD_TAP_INTERRUPT
